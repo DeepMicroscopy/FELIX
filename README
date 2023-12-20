@@ -9,11 +9,11 @@ This repository provides the materials used in *A Dataset for Studying Human-AI 
 
 ## Contents
 
-- **image_files:** The `image_files/` directory contains datasets used in the experiments. Each image file has a 3-digit name for unique identification of the image. For convenience, the image files are stored in subfolders: `image_files/Validation`, and `image_files/Experimental`. The final image dataset of our proxy task refers to all 30 images in the validation dataset and all 30 images in the experimental dataset. The 30 images excluded from the study were removed from the study. 
+- **image_files:** The `image_files/` directory contains datasets used in the experiments. Each image file has a 3-digit name for unique identification of the image. For convenience, the image files are stored in subfolders: `image_files/Validation`, and `image_files/Experimental`. The final image dataset of our proxy task refers to all 30 images in the validation dataset and all 30 images in the experimental dataset. The 30 images excluded from the study were removed. 
 
 - **imagenet_info:** The `imagenet_info/` directory contains some files that were used to train a classifier on the subset of cat images from the ImageNet training set.  
 
-- **model_results:** The `model_results/` directory contains the results from the classifier on the three subsets of the study.
+- **study_data:** The `study_data/` directory contains two files. The ```Image_Level_Data.csv``` file contains all information about each image including an indication to which dataset it belongs, the original web location, artist and licensing information, as well as classification results from the user study. The ```Subject_Level_Data.csv``` file contains all information about each subject in the study including the classification results and demographics. All participants are anonymized. 
 
 - **lib:** The `lib/` directory contains the source code used to train the classifier.
 
@@ -41,12 +41,11 @@ pip install -r requirements.txt
 
 ## License
 
-The images located in the ```image_files/``` directory have been obtained with the necessary rights and modified to meet our specific requirements. As a result, we are able to publish these images for public use under the Creative Commons 4.0 BY-NC-SA License.
+The images located in the ```image_files/``` directory were obtained with the necessary rights and modified to meet our specific requirements. As a result, we are able to publish these images for public use under the Creative Commons 4.0 BY-NC-SA License.
 
-The original images used in this study have primarily been sourced from Wikimedia Commons, and they are subject to various Creative Commons licenses. Additionally, certain images were obtained from stock image pages, for which we have secured the requisite licenses to incorporate them into our project.
+The original images used in this study were primarily sourced from Wikimedia Commons, and they are subject to various Creative Commons licenses. Additionally, certain images were obtained from stock image pages, for which we have secured the requisite licenses to incorporate them into our project.
 
-To provide comprehensive information, we have compiled the ```CatStudyImagesInfos.csv``` file, which establishes a direct link between each image and its original location. This file duly acknowledges the respective artists and includes the original license information for transparency and compliance.
-
+The ```Image_Level_Data.csv``` file links each image to its original location, acknowledging the artists and providing original license information for transparency and compliance.
 
 
 ## Acknowledgements
