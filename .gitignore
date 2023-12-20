@@ -4,14 +4,13 @@ checkpoints/
 figures/
 ILSVRC/
 imagenet-env/
-Katzenstudie_GradCAM/
+Katzenstudie*
 presentation/
 Wikimedia*/
-03_perform_calibration.ipynb
-04_grad_cam.ipynb
-05_scrap_stock_images.ipynb
-06_stock_image_results.ipynb
-REGINA_Katzenbilder.csv
+03*
+04*
+05*
+06*
 
 
 # Byte-compiled / optimized / DLL files

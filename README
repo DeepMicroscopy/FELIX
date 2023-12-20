@@ -1,0 +1,58 @@
+# FELIX - Feline Evaluation with Layperson and ML Interaction Experience Dataset
+
+## Overview
+
+This repository provides the materials used in *A Dataset for Studying Human-AI Interaction in Multiclass Image Classification*. The dataset consists of 60 creative commons-licensed images of cats to be classified into big cats (pantherinae), small cats (felinae) that are not domestic cats, and domestic cats (felis catus). The dataset is complemented by extensive data from 302 human subjects' evaluations and recommendations by a machine learning pipeline trained in the same task. 
+
+<img src="paper_figures/Figure.pdf" width="800px" align="center"/>
+
+
+## Contents
+
+- **image_files:** The `image_files/` directory contains datasets used in the experiments. Each image file has a 3-digit name for unique identification of the image. For convenience, the image files are stored in subfolders: `image_files/Validation`, and `image_files/Experimental`. The final image dataset of our proxy task refers to all 30 images in the validation dataset and all 30 images in the experimental dataset. The 30 images excluded from the study were removed from the study. 
+
+- **imagenet_info:** The `imagenet_info/` directory contains some files that were used to train a classifier on the subset of cat images from the ImageNet training set.  
+
+- **model_results:** The `model_results/` directory contains the results from the classifier on the three subsets of the study.
+
+- **lib:** The `lib/` directory contains the source code used to train the classifier.
+
+## Downloading ImageNet Dataset
+
+A subset of the ImageNet dataset is used to train the classifier. If you would like to train your own algorithm. Follow these steps and prepare the dataset. 
+
+1. The original dataset with additional labels for object detection is semi-publicly available at [Kaggle](https://www.kaggle.com/c/imagenet-object-localization-challenge/data). To download the dataset you need to register a Kaggle account and join the challenge.
+
+2. Download the data via the `kaggle-api` (see guidelines [here](https://github.com/Kaggle/kaggle-api#api-credentials)) or use the `Download All` button.
+
+3. After the download is complete extract and unuzip the files in a directory of your choice. 
+
+4. If you want to train a cat classifier, create a new virtual environment and install the `requirements.txt` file, e.g. with 
+
+
+```
+pip install -r requirements.txt 
+```
+
+5. Open the `00_load_imagenet.ipynb` notebook and follow the steps to prepare the dataset. Be sure to adapt the directories accordingly.
+
+6. Training your own classifier can be down using the `07_train_model_catstudy.ipynb` notebook.
+
+
+## License
+
+The images located in the ```image_files/``` directory have been obtained with the necessary rights and modified to meet our specific requirements. As a result, we are able to publish these images for public use under the Creative Commons 4.0 BY-NC-SA License.
+
+The original images used in this study have primarily been sourced from Wikimedia Commons, and they are subject to various Creative Commons licenses. Additionally, certain images were obtained from stock image pages, for which we have secured the requisite licenses to incorporate them into our project.
+
+To provide comprehensive information, we have compiled the ```CatStudyImagesInfos.csv``` file, which establishes a direct link between each image and its original location. This file duly acknowledges the respective artists and includes the original license information for transparency and compliance.
+
+
+
+## Acknowledgements
+
+This work was supported by the Bavarian Institute for Digital Transformation (bidt) under the grant "Responsibility Gaps in Human Machine Interaction (ReGInA)"
+
+
+
+
