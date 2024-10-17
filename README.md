@@ -9,7 +9,7 @@ This repository provides the materials used in *A Dataset for Studying Human-AI 
 
 ## Contents
 
-- **image_files:** The `image_files/` directory contains datasets used in the experiments. Each image file has a 3-digit name for unique identification of the image. For convenience, the image files are stored in subfolders: `image_files/Validation`, and `image_files/Experimental`. The final image dataset of our proxy task refers to all 30 images in the validation dataset and all 30 images in the experimental dataset. The 30 images excluded from the study were removed. 
+- **image_files:** The `image_files/` directory contains datasets used in the experiments. Each image file has a 3-digit name for unique identification of the image. For convenience, the image files are stored in subfolders: `image_files/Recommender_test_set`, and `image_files/Experimental_study_set`. The final image dataset of our proxy task refers to all 30 images in the recommender test dataset and all 30 images in the experimental study dataset. The 30 images excluded from the study are provided as well in the folder `image_files/Excluded`. 
 
 - **imagenet_info:** The `imagenet_info/` directory contains some files that were used to train a classifier on the subset of cat images from the ImageNet training set.  
 
