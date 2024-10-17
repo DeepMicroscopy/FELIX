@@ -174,8 +174,8 @@ class CatStudyModule(pl.LightningDataModule):
         self.save_hyperparameters()
 
         self.excluded_dataset = self.create_dataset(split='Excluded')
-        self.validation_dataset = self.create_dataset(split='Validation')
-        self.experimental_dataset = self.create_dataset(split='Experimental')
+        self.validation_dataset = self.create_dataset(split='Recommender_test_set')
+        self.experimental_dataset = self.create_dataset(split='Experimental_study_set')
 
     
     def set_split(self, split: str) -> None:
@@ -207,7 +207,7 @@ class CatStudyModule(pl.LightningDataModule):
     def predict_dataloader(self) -> DataLoader:
         if self.split == 'Excluded':
             return DataLoader(self.excluded_dataset, self.hparams.batch_size, num_workers=self.hparams.num_workers)
-        elif self.split == 'Experimental':
+        elif self.split == 'Experimental_study_set':
             return DataLoader(self.experimental_dataset, self.hparams.batch_size, num_workers=self.hparams.num_workers)
         else:
             return DataLoader(self.validation_dataset, self.hparams.batch_size, num_workers=self.hparams.num_workers)

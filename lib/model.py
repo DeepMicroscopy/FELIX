@@ -42,7 +42,7 @@ class ImageNetModel(pl.LightningModule):
         self.__build_model()
 
         # define metric
-        self.acc = Accuracy(task='multiclass', num_classes=self.num_classes)  
+        self.acc = Accuracy(task='multiclass', num_classes=self.hparams.num_classes)  
 
 
     def __build_model(self) -> None:
@@ -62,13 +62,13 @@ class ImageNetModel(pl.LightningModule):
                 param.requires_grad = False
 
         # add new classifier
-        self.fc = nn.Linear(_in_features, self.num_classes)
+        self.fc = nn.Linear(_in_features, self.hparams.num_classes)
         
         # define loss function
-        if not self.logit_norm:
+        if not self.hparams.logit_norm:
             self.loss_func = F.binary_cross_entropy_with_logits
         else:
-            self.loss_func = LogitNormLoss(t=self.temperature)
+            self.loss_func = LogitNormLoss(t=self.hparams.temperature)
 
 
     def forward(self, x):
@@ -98,7 +98,7 @@ class ImageNetModel(pl.LightningModule):
         logits = self(x)
         
         # compute loss 
-        y_true = F.one_hot(y, num_classes=self.num_classes).type(torch.float)
+        y_true = F.one_hot(y, num_classes=self.hparams.num_classes).type(torch.float)
         loss = self.loss(logits, y_true)
         acc = self.acc(logits, y)
         
@@ -139,12 +139,12 @@ class ImageNetModel(pl.LightningModule):
         """Configure optimizer."""
         parameters = list(self.parameters())
         trainable_parameters = list(filter(lambda p: p.requires_grad, parameters))
-        if self.optimizer == 'SGD':
-            return torch.optim.SGD(trainable_parameters, lr=self.lr)
-        elif self.optimizer == 'Adam':
-            return torch.optim.Adam(trainable_parameters, lr=self.lr)
-        elif self.optimizer == 'AdamW':
-            return torch.optim.AdamW(trainable_parameters, lr=self.lr)
+        if self.hparams.optimizer == 'SGD':
+            return torch.optim.SGD(trainable_parameters, lr=self.hparams.lr)
+        elif self.hparams.optimizer == 'Adam':
+            return torch.optim.Adam(trainable_parameters, lr=self.hparams.lr)
+        elif self.hparams.optimizer == 'AdamW':
+            return torch.optim.AdamW(trainable_parameters, lr=self.hparams.lr)
         else:
             raise NotImplementedError
 
