@@ -43,14 +43,14 @@ pip install -r requirements.txt
 
 The images located in the ```image_files/``` directory were obtained with the necessary rights and modified to meet our specific requirements. As a result, we are able to publish these images for public use under the Creative Commons 4.0 BY-NC-SA License.
 
-The original images used in this study were primarily sourced from Wikimedia Commons, and they are subject to various Creative Commons licenses. Additionally, certain images were obtained from stock image pages, for which we have secured the requisite licenses to incorporate them into our project.
+The original images used in this study were primarily sourced from Wikimedia Commons, and they are subject to various Creative Commons licenses. Additionally, certain images were obtained from stock image databases, for which we have obtained the required licenses to incorporate them into our project in the form that is provided in this repository.
 
 The ```Image_Level_Data.csv``` file links each image to its original location, acknowledging the artists and providing original license information for transparency and compliance.
 
 
 ## Acknowledgements
 
-This work was supported by the Bavarian Institute for Digital Transformation (bidt) under the grant "Responsibility Gaps in Human Machine Interaction (ReGInA)"
+This work was supported by the Bavarian Institute for Digital Transformation (bidt) under the grant "Responsibility Gaps in Human Machine Interaction (ReGInA)".
 
 
 
