@@ -41,7 +41,7 @@ pip install -r requirements.txt
 
 ## License
 
-The images located in the ```image_files/``` directory were obtained with the necessary rights and modified to meet our specific requirements. As a result, we are able to publish these images for public use under the Creative Commons 4.0 BY-NC-SA License.
+The images located in the ```image_files/``` directory were obtained with the necessary rights and modified to meet our specific requirements. As a result, we are able to publish these images for public use under the Creative Commons 4.0 BY-SA License.
 
 The original images used in this study were primarily sourced from Wikimedia Commons, and they are subject to various Creative Commons licenses. Additionally, certain images were obtained from stock image databases, for which we have obtained the required licenses to incorporate them into our project in the form that is provided in this repository.
 
