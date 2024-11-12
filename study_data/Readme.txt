@@ -1,7 +1,7 @@
 General remarks for both files:
 
-Field separator: ";"
-Decimal point: ","
+Field separator: ","
+Decimal point: "."
 
 
 
@@ -49,7 +49,7 @@ URL: Link to where the image was downloaded
 
 Artist: Link to the photographer of the image
 
-License: License of the Image
+License: Current license of the image
 
 
 Variable names and values in subject-level dataset:
