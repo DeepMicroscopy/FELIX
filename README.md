@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository provides the materials used in *A Dataset for Studying Human-AI Interaction in Multiclass Image Classification*. The dataset consists of 60 creative commons-licensed images of cats to be classified into big cats (pantherinae), small cats (felinae) that are not domestic cats, and domestic cats (felis catus). The dataset is complemented by extensive data from 302 human subjects' evaluations and recommendations by a machine learning pipeline trained in the same task. 
+This repository provides the materials used in *A validated task for studying human-AI interaction in multiclass image classification*. The dataset consists of 60 creative commons-licensed images of cats to be classified into big cats (pantherinae), small cats (felinae) that are not domestic cats, and domestic cats (felis catus). The dataset is complemented by extensive data from 302 human subjects' evaluations and recommendations by a machine learning pipeline trained in the same task. 
 
 <img src="paper_figures/Figure.png" width="800px" align="center"/>
 
