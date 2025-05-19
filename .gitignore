@@ -1,6 +1,5 @@
 # individual folders & files
 Cats/
-checkpoints/
 figures/
 ILSVRC/
 imagenet-env/
@@ -13,6 +12,7 @@ Wikimedia*/
 06*
 09*
 99*
+*.ckpt
 
 
 # Byte-compiled / optimized / DLL files
